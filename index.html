@@ -1,0 +1,412 @@
+<html lang="en"  >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Concert+One&family=Dosis:wght@200..800&family=Gloock&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Mea+Culpa&family=Merienda:wght@300..900&family=Monoton&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Playwrite+CU:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tagesschrift&display=swap" rel="stylesheet">
+
+<style>
+/* global reset + overflow fix */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #000;
+}
+* {font-family: Archivo;}
+
+
+
+/* navigation */
+.nav {
+  border: 1px solid royalblue;
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+  padding: 1%;
+}
+.nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* hero section */
+.first {
+  width: 80%;
+  margin: 8% auto 0;
+  text-align: center;
+}
+.h1 {
+  font-weight: bold;
+  color: #fff;
+  font-size: clamp(2rem, 5vw, 50px);
+}
+.h2 {
+  font-weight: bold;
+  color: #1da1f2;
+  font-size: clamp(1.7rem, 4vw, 24px);
+}
+.first p {
+  font-size: clamp(1rem, 2.5vw, 18px);
+  color: #fff;
+  margin-top: 1rem;
+}
+
+/* horizontal rules */
+.hr1 {
+  width: 50%;
+  height: 2px;
+  background-color: #1da1f2;
+  margin: 2rem auto;
+  border: none;
+  border-radius: 50px;
+}
+.hr2 {
+  width: 6%;
+  height: 5px;
+  background-color: #1da1f2;
+  margin: 1rem auto;
+  border: none;
+  border-radius: 50px;
+}
+
+/* section wrapper — unified for About, Skills, Education */
+.whole{
+  width: 60%;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+
+.whole2,
+.whole3  {width: 60%;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  box-sizing: border-box; }
+.whole2>.mee {text-align: center;}
+.whole3>.mee {text-align: center;}
+/* content cards */
+.about,
+.skills,
+.education {
+ 
+  width: 100%;
+  border-radius: 10px;
+  padding: 2%;
+  box-sizing: border-box;
+  border: solid rgb(69, 138, 249);
+   opacity: 0; transition: translatey(20px); animation: fadeslideup 4s ease forwards;
+}
+@keyframes fadeslideup{ to {opacity: 2; transform:translatey(0);}}
+
+
+.about >h2, p,
+.skills > ul,
+.education > ul {
+  font-size: large;
+  color: #fff;
+  line-height: 1.6;
+  
+}
+p {opacity: 0; transition: translatey(-30px); animation: fadeslideup 1.5s ease forwards;}
+
+
+
+
+/* section titles */
+.mee {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+/* hover glows */
+.about:hover   { box-shadow:  0  14px 35px rgb(37, 116, 253);}
+.skills:hover  {box-shadow:  0  14px 35px rgb(31, 137, 251); }
+.education:hover {box-shadow:  0  14px 35px rgb(29, 134, 247); }
+.cook:hover{box-shadow:  0  14px 35px rgb(33, 131, 242);}
+.intro :hover{box-shadow:  0  14px 35px rgb(40, 102, 249); }
+/* mobile tweaks */
+@media (max-width: 768px) {
+  .whole,
+  .whole2,
+  .whole3 {
+    width: 95%;
+    padding: 5%;
+  }
+  .about > p,
+  .skills > ul,
+  .education > ul {
+    font-size: 0.8rem;
+    
+  }
+  .h2 {font-size:1rem ;}
+  .hr2 {
+    width: 20%;
+  }
+  .education>p {font-size: 1rem;}
+@media (max-width: 768px) {
+  .parent {
+    flex-wrap: wrap; /* Already added, but reaffirmed here for clarity */
+    justify-content: center;
+  }
+
+  .intro {
+    min-width: 90%; /* So each box takes most of the row, still responsive */
+    margin-bottom: 5%; /* Optional: extra vertical spacing */
+  }
+}
+.cook {min-width:80% ; }
+.kpop {width: 90%;}
+
+}
+
+
+.about>h2 {font-size: x-large;}
+
+
+.ha {position: relative; top: 5%;}
+.hope {text-align: center; color: #3a80f9;}
+.hro { width: 50%;
+  height: 3px;
+  background-color: #1da1f2;
+  margin: 2rem auto;
+  border: none;
+  border-radius: 50px;
+}
+
+.parent {
+  width: 75%;
+  min-height: 45%;
+  box-shadow: 5px 7px 15px rgb(33, 121, 245);
+  position: relative;
+  top: 5%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+  padding: 5%;
+  border: solid rgb(42, 143, 251);
+  border-width: 1px;
+  align-items: center;
+  flex-direction: row;
+  
+}
+.intro { min-width: 55%; height: 75%; border: solid rgb(38, 136, 255); border-radius: 10px;  }
+.tap{background-color: #1da1f2; color: #fff; border-radius: 5px; min-width:35%; min-height: 25%;
+ margin-top: 7%; margin-bottom: 3%; }
+
+
+
+
+.ha1 {position: relative; top: 10%;}
+.hope1 {text-align: center; color: #5594ff;}
+.hro1 { width: 50%;
+  height: 3px;
+  background-color: #1da1f2;
+  margin: 2rem auto;
+  border: none;
+  border-radius: 50px;
+}
+
+
+
+ .cook {width: 30%; border: rgb(42, 125, 249) solid; height: 70%; box-shadow: 5px 7px 15px rgb(28, 126, 255); margin: auto;  border-radius: 3%; }
+ .kpop {margin-top: 7%; margin-left: 7%; line-height: 2rem;}
+.old {width: 90%; height: 8%;  border-radius: 5px;}
+.new {color: #fff; }
+textarea {width: 90%; height: 25%;color: #fff;  border-radius: 5px;}
+
+
+.social { display: flex; justify-content: center; gap: 3rem; margin-top: 2rem; }
+.social a { font-size: 2rem; color: #fff; transition: color 0.3s; }
+.social a:hover { color: #1da1f2; }
+.sub {width: 50% ; height: 6%; border-radius:7px ; background-color: #5594ff; color:white ; margin-left: 20%; margin-top: 3%;}
+.use {color: white;}
+</style>
+
+
+</head>
+<body>
+
+
+<nav class="nav">
+
+  <a href="#whole">About me</a>
+ <a href="#contact">Contact me</a>
+<a href="#parent">Projects</a>
+
+
+
+
+</nav>
+
+
+
+  <section class="first"> <h1 class="h1">Hi, I'm  Sara Farahi</h1>
+  <h1 class="h2">Front-end Developer & UX Designer</h1>
+  <p>"I'm a passionate User Experience Designer and Frontend Developer, dedicated to creating intuitive, engaging, and beautiful digital experiences. I blend creativity with technical skills to build user-centered designs that bring ideas to life."</p>
+  
+  </section>
+
+<br> 
+  
+
+
+
+
+
+</div>
+
+    <hr class="hr1">
+<br>
+
+<section class="whole" id="whole">
+  <h1 class="mee">About Me</h1>
+<hr class="hr2">
+
+
+<div class="About">
+<h2>Sara Farahi</h2>
+<p>Certified UX Design Professional with solid skills in user research, wireframing, and prototyping. Currently learning front-end development to strengthen design capabilities and better understand user interaction from a technical perspective. Known for strong communication, collaboration, and attention to detail, with these qualities demonstrated through active volunteer work and project contributions. Passionate about creating intuitive, user-friendly designs that improve digital experiences.</p>
+
+</div>
+</section>
+  
+ 
+
+<section class="whole2">
+  <h1 class="mee">Skills</h1>
+<hr class="hr2">
+
+
+<div class="skills">
+<ul>
+  <li><b>Design tools :</b> Figma,Adobe Express , Canva.</li>
+  <li><b>UX Skills :</b> wireframing , prototyping , user research , information architecture . </li>
+  <li><b>Technical Skills:</b> HTML5, CSS .</li>
+  <li><b>Soft Skills :</b> communication, teamwork, problem solving, attention to details .</li>
+  <li><b>Languages :</b>English(professional proficiency) , Persian (Native), Pashto (Native).</li>
+</ul>
+
+</div>
+</section>
+
+
+
+<section class="whole3">
+  <h1 class="mee">Education</h1>
+<hr class="hr2">
+
+
+<div class="education">
+<ul>
+  <P><B>High School Student</B></P>
+
+  <li><i>Flying Wings Online School</i>  </li>
+
+  <P><B>Google UX Design Professional Certificate</B></P>
+
+  <li><i>Coursera-2025</i></li>
+
+  <P><B>Front-end Development</B></P>
+
+  <li><i> CodeTo Inspire</i></li>
+</ul>
+
+</div>
+</section>
+
+<div class="ha">
+
+<h1 class="hope" id="parent">Projects</h1>
+
+<hr class="hro">
+
+
+
+
+
+</div>
+
+
+
+
+<div class="parent"   >
+
+  <div class="box">
+    <div class="intro">
+      <h2 class="use">Recipe Book Website</h2>
+      <img src="Screenshot (780).png" alt="restaurant" width="100%" height="70%">
+    </div>
+    <form action="indexo.html"><button class="tap">Visit</button></form>
+  </div>
+
+  <div class="box">
+    <div class="intro">
+      <h2 class="use">Sara Cinema Website</h2>
+      <img src="Screenshot (781).png" alt="restaurant" width="100%" height="70%">
+    </div>
+    <form action="1index.html"><button class="tap">Visit</button></form>
+  </div>
+
+  <div class="box">
+    <div class="intro">
+      <h2 class="use">Afghan Proverbs Website</h2>
+      <img src="Screenshot (782).png" alt="restaurant" width="100%" height="70%">
+    </div>
+    <form action="proverb.html"><button class="tap">Visit</button></form>
+  </div>
+
+</div>
+<div class="ha1" id="contact">
+
+<h1 class="hope1">Contact Me</h1>
+
+<hr class="hro1">
+
+
+<div class="cook">
+
+<form action="" class="kpop">
+
+<label for="" class="new">Full Name</label> <br>
+
+<input type="text"  class="old" id=""><br>
+
+<label for="" class="new">Email</label><br>
+
+<input type="text" class="old" id=""><br>
+
+<label for="" class="new">Phone Number</label><br>
+
+<input type="text" class="old" id=""><br>
+
+
+<label for=""  class="new">Comment</label><br>
+<textarea name="" id="" class="old2"></textarea>
+
+<input type="submit" value="Submit" class="sub">
+
+</form>
+
+
+
+</div>
+
+<div class="social">
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+    </div>
+
+</body>
+</html>
